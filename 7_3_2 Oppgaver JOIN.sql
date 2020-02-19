@@ -3,6 +3,7 @@ from city
 where Name like 'O%o'
 order by Population desc;
 
+/*2*/
 select country.Name, city.Name, city.Population
 from city 
 left join country on city.CountryCode = country.Code
