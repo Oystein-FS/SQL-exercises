@@ -40,6 +40,48 @@ from person;
 select *
 from epost;
 
+alter table person
+drop column EPost;
+
+create table personCopy (
+	ID int auto_increment,
+    Personnummer char(11) not null unique,
+    Navn varchar(100) unique,
+    EPost varchar(100) unique,
+    primary key(ID)
+);
+
+drop table personCopy;
+
+select Navn, date_format(Foedselsdato, '%d.%m.%Y')
+from person;
+
+update person 
+set Foedselsdato = STR_TO_DATE('20.02.1912', '%d.%m.%Y') 
+where Navn = 'Ola Normann';
+
+select *
+from person;
+
+select *
+from information_schema.tables
+WHERE table_schema = 'world' and table_name = 'city';
+
+select max(ID)
+from world.city;
+
+select *
+from world.city
+where CountryCode = 'NOR';
+ 
+
+
+
+
+
+
+
+
  
 
 
