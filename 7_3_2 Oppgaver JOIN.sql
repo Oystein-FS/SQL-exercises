@@ -45,7 +45,7 @@ left join country on  country.Code = city.CountryCode
 where city.Population > 8000000
 order by  city.Population desc;
 
-/*8*/
+-- 8
 select country.Name, country.Continent, count(country.Name) as 'Languages'
 from country
 left join countryLanguage on country.Code = countryLanguage.CountryCode

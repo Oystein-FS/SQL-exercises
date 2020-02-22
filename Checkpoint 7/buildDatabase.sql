@@ -78,9 +78,4 @@ INSERT INTO languagetools(Tool_ID, Language_ID)
     
     SELECT *
     FROM languages2;
-    
-
-    
-    
-
  
